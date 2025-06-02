@@ -1,0 +1,9 @@
+version: "3"
+agent:
+  authtoken: xxxxxxxxxxxx
+  log: stdout
+
+tunnels:
+  webui:
+    addr: host.docker.internal:8080
+    proto: http
