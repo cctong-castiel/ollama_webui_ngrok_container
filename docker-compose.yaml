@@ -11,8 +11,6 @@ services:
       - "/etc/ngrok.yml"
     volumes:
       - ./ngrok/ngrok.yml:/etc/ngrok.yml
-    environment:
-      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
     depends_on:
       - webui
       - nginx
@@ -20,7 +18,7 @@ services:
   ollama:
     image: ollama/ollama
     volumes:
-      - /Users/tongcc/.ollama/models:/Users/tongcc/.ollama/models
+      - ollama_models:/root/.ollama/models
     ports:
       - "11434:11434"
 
@@ -32,7 +30,6 @@ services:
       - OLLAMA_API_BASE_URL=http://localhost:11434/api
     volumes:
       - webui_data:/app/backend/data
-      - ollama_models:/app/backend/ollama_models
     depends_on:
       - ollama
 

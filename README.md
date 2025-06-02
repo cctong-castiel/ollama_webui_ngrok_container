@@ -13,6 +13,7 @@ docker-compose down
 ```
 
 ### Reference
+- Ollama webui docker github repo: https://github.com/codearrangertoo/ollama-webui-docker
 - Getting Started with ngrok, https://ngrok.com/docs/guides/developer-preview/getting-started/
 - Using ngrok with Docker, https://ngrok.com/docs/using-ngrok-with/docker/
 - How to Use Ngrok With Docker, https://tech.aufomm.com/how-to-use-ngrok-with-docker/
