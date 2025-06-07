@@ -18,7 +18,7 @@ services:
   ollama:
     image: ollama/ollama
     volumes:
-      - ollama_models:/root/.ollama/models
+      - "${ROOT}/.ollama/models:/root/.ollama/models"
     ports:
       - "11434:11434"
 
@@ -41,5 +41,4 @@ services:
     - ./nginx-conf/nginx.conf:/etc/nginx/nginx.conf:ro
 
 volumes:
-  ollama_models:
   webui_data:
