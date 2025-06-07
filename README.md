@@ -3,6 +3,8 @@
 It is a repository to set up a docker containers for ngrok, nginx, Ollama and Ollama web ui. 
 You can use the ngrok link to access Ollama web ui when you are in the street. You can use llm models to help you answer questions.
 
+<img src="assets/imgs/ollama_webui.jpg" width="200"/>
+
 ### commands
 ```
 docker-compose up -d
