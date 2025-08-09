@@ -4,6 +4,7 @@ services:
     image: ngrok/ngrok:latest
     ports:
       - 4040:4040
+    mem_limit: 25g
     command:
       - "start"
       - "--all"
@@ -17,6 +18,7 @@ services:
 
   ollama:
     image: ollama/ollama
+    mem_limit: 25g
     volumes:
       - "${ROOT}/.ollama/models:/root/.ollama/models"
     ports:
@@ -24,6 +26,7 @@ services:
 
   webui:
     image: ghcr.io/open-webui/open-webui:main
+    mem_limit: 25g
     ports:
       - "8080:8080"
     environment:
@@ -35,6 +38,7 @@ services:
 
   nginx:
     image: nginx
+    mem_limit: 25g
     ports:
     - "80:80"
     volumes:
